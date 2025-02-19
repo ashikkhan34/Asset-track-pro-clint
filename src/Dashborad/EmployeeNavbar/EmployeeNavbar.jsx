@@ -20,7 +20,7 @@ const EmployeeNavbar = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-200">
+            <div className="navbar bg-base-200 px-5 mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,7 +43,7 @@ const EmployeeNavbar = () => {
                            {employeeLinks}
                         </ul>
                     </div>
-                    <Link to='/employee-dashboard'><img className='w-10' src={logo} alt="" /></Link>
+                    <Link to='/employee-dashboard'><img className='w-10 ' src={logo} alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -54,7 +54,7 @@ const EmployeeNavbar = () => {
                 {
                         user ? <>
                             <p className='mt-2 font-serif md:text-xl '>{user?.displayName}</p>
-                            <img className='w-10 h-10 rounded-full' src={user?.photoURL} alt="" />
+                            <img className='w-10 mr-3 h-10 rounded-full' src={user?.photoURL} alt="" />
                             <button onClick={handleLogOut} className='btn btn-primary'>Logout</button>
                         </> : <>
                             <Link to='/login'> <a className="btn">Login</a></Link>
