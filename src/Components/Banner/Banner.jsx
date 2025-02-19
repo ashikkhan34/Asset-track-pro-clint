@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import banner1 from '../../assets/b1.jpg'
 import banner2 from '../../assets/b2.jpg'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -10,12 +11,13 @@ const Banner = () => {
             <Carousel className='text-center'>
                 <div className='relative'>
                     <img src={banner1} />
-                    <button className=' btn btn-primary'>Join as an Employee</button>
+                    
+                    <Link to='/employeeLogin'> <button className=' btn btn-primary'>Join as an Employee</button></Link>
                 </div>
                 <div>
                     <img src={banner2} />
-                    <button className=' btn btn-primary '>Join as HR Manager</button>
-
+                   
+                    <Link to='/managerLogin'> <button className=' btn btn-primary '>Join as HR Manager</button> </Link>
                 </div>
             </Carousel>
         </div>

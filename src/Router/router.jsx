@@ -29,6 +29,7 @@ import UpdateAsset from '../Dashborad/UpdateAsset/UpdateAsset.jsx';
 import ManagerProfile from '../Dashborad/ManagerProfile/ManagerProfile.jsx';
 import UpdateProfile from '../Dashborad/UpdateProfile/UpdateProfile.jsx';
 import ManagerRoute from '../ManagerRoute/ManagerRoute.jsx';
+// import Payment from '../Payment/Payment.jsx';
 
 export const router = createBrowserRouter([
   {
@@ -103,7 +104,11 @@ export const router = createBrowserRouter([
         path:'updateAsset/:id',
         element:<UpdateAsset></UpdateAsset>,
         loader:({params}) =>fetch(`https://asset-track-pro-server-pink.vercel.app/assets/${params.id}`)
-      }
+      },
+      // {
+      //   path:'payment',
+      //   element: <Payment></Payment>
+      // }
     ]
   },
   // employee route

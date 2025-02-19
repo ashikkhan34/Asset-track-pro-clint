@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import useAuth from './useAuth';
 
 export const axiosSecure = axios.create({
-    baseURL:'https://asset-track-pro-server-pink.vercel.app/'
+    baseURL:'http://localhost:4000'
 })
 
 const useAxiosSecure = () => {

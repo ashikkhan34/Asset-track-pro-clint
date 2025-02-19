@@ -35,7 +35,6 @@ const AuthProvider = ({children}) => {
 
     //update user profile
     const updateUserProfile = (name, photo) => {
-        console.log(name, photo)
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo
         })
@@ -54,8 +53,8 @@ const AuthProvider = ({children}) => {
             setUser(currentUser)
             if (currentUser) {
                 //get token and store client
-                const userInfo = { email: currentUser.email }
-                axiosPublic.post('/jwt', userInfo)
+                const userInformation = { email: currentUser.email }
+                axiosPublic.post('/jwt', userInformation)
                     .then(res => {
                         if (res.data.token) {
                             localStorage.setItem('asset-token', res.data.token)

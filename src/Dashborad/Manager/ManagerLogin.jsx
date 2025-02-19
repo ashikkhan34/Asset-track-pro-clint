@@ -38,7 +38,7 @@ const ManagerLogin = () => {
                 'content-type': 'multipart/form-data'
             }
         })
-        createUser(data.email, data.password, data.photoURL)
+        createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
@@ -71,7 +71,7 @@ const ManagerLogin = () => {
                                 }
                                 
                             })
-                            navigate('/login')
+                            navigate('/dashboards/payment')
 
                     })
                     .catch(error => console.log(error))
